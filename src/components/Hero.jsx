@@ -29,6 +29,17 @@ export default function Hero({ musicTrigger }) {
       {/* ── Center Text ── */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center mt-4">
         <motion.p
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          dir="rtl"
+          className="font-arabic text-[1.6rem] sm:text-[2rem] text-[#8B6914] mb-4"
+        >
+          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </motion.p>
+
+        <motion.p
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
