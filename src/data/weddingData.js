@@ -4,17 +4,17 @@
 
 export const weddingData = {
   // ── Couple ────────────────────────────────────────────────────────────────
-  groom: "Aadil",
-  bride: "Hadiya",
+  groom: "Aadil Ansari",
+  bride: "Hadiya Ansari",
 
   // ── Date helpers ──────────────────────────────────────────────────────────
-  dayOfWeek: "TUESDAY",
-  dayNumber: "03",
+  dayOfWeek: "SATURDAY",
+  dayNumber: "07",
   monthName: "NOVEMBER",
   yearNumber: "2026",
-  dateDisplay: "03 NOVEMBER 2026",
-  numericDate: "03 · 11 · 2026",
-  isoDate: "2026-11-03T18:00:00+05:30",
+  dateDisplay: "07 NOVEMBER 2026",
+  numericDate: "07 · 11 · 2026",
+  isoDate: "2026-11-07T20:00:00+05:30",
 
   // ── Venue ─────────────────────────────────────────────────────────────────
   venueName: "Kokni Community Hall",
@@ -66,8 +66,8 @@ export const weddingData = {
 
   event: {
     heading:   "THE WEDDING",
-    dateText:  "Tuesday, 3 November 2026",
-    timeText:  "Details to follow",
+    dateText:  "Saturday, 7 November 2026",
+    timeText:  "8:00 PM – 11:00 PM",
     venueText: "Kokni Community Hall, Morland Rd, Madanpura, Mumbai, Maharashtra 400008",
     tagline:   "We can't wait to celebrate with you.",
   },
