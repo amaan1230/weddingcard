@@ -39,14 +39,14 @@ function DateRow({ day, dateNumber, month, time, year }) {
   );
 }
 
-function VenueBlock() {
+function VenueBlock({ name, address }) {
   return (
     <>
       <p className="font-serif text-[1.1rem] font-semibold text-[#1E1410] mb-1">
-        {weddingData.venueCard.name}
+        {name}
       </p>
       <p className="font-sans text-[10px] tracking-[0.03em] uppercase text-[#5C4E46] leading-relaxed max-w-[240px] mx-auto">
-        {weddingData.venueCard.address}
+        {address}
       </p>
     </>
   );
@@ -116,7 +116,7 @@ export default function Events() {
 
           <DateRow day={nikah.day} dateNumber={nikah.dateNumber} month={nikah.month} time={nikah.time} year={nikah.year} />
 
-          <VenueBlock />
+          <VenueBlock name={nikah.venueName} address={nikah.venueAddress} />
         </motion.div>
 
         {/* ── Walima card ── */}
@@ -141,7 +141,7 @@ export default function Events() {
 
           <DateRow day={walima.day} dateNumber={walima.dateNumber} month={walima.month} time={walima.time} year={walima.year} />
 
-          <VenueBlock />
+          <VenueBlock name={walima.venueName} address={walima.venueAddress} />
         </motion.div>
       </div>
     </section>
