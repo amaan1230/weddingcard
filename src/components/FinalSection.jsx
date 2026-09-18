@@ -3,7 +3,15 @@ import { motion } from 'framer-motion';
 import { GoldStar, GoldDots } from './Ornaments';
 import { weddingData } from '../data/weddingData';
 
+function splitName(fullName) {
+  const [first, ...rest] = fullName.trim().split(' ');
+  return { first, last: rest.join(' ') };
+}
+
 export default function FinalSection() {
+  const groom = splitName(weddingData.groom);
+  const bride = splitName(weddingData.bride);
+
   return (
     <section className="relative py-28 px-6 flex flex-col items-center justify-center overflow-hidden bg-[#FDFBF7]">
       <div
@@ -27,15 +35,31 @@ export default function FinalSection() {
           Forever Begins Here
         </motion.p>
 
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="font-serif text-[clamp(2.5rem,10vw,4rem)] tracking-wider text-[#1E1410] uppercase font-normal my-3"
+          className="my-3 leading-[1.05]"
         >
-          {weddingData.groom} &amp; {weddingData.bride}
-        </motion.h2>
+          <span className="block font-serif text-[clamp(2.5rem,10vw,4rem)] tracking-wider text-[#8B6914] uppercase font-normal">
+            {groom.first}
+          </span>
+          {groom.last && (
+            <span className="block font-serif text-[clamp(0.85rem,3vw,1.1rem)] tracking-[0.3em] text-[#1E1410]/65 uppercase mt-1">
+              {groom.last}
+            </span>
+          )}
+          <span className="block font-script text-[1.8rem] text-[#8B6914] my-1">&amp;</span>
+          <span className="block font-serif text-[clamp(2.5rem,10vw,4rem)] tracking-wider text-[#8B6914] uppercase font-normal">
+            {bride.first}
+          </span>
+          {bride.last && (
+            <span className="block font-serif text-[clamp(0.85rem,3vw,1.1rem)] tracking-[0.3em] text-[#1E1410]/65 uppercase mt-1">
+              {bride.last}
+            </span>
+          )}
+        </motion.div>
 
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <GoldDots />
