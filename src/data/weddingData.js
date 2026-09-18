@@ -64,13 +64,22 @@ export const weddingData = {
     tagline:   "A new chapter. A lifetime of love.",
   },
 
-  event: {
-    heading:   "THE WEDDING",
-    dateText:  "Saturday, 7 November 2026",
-    timeText:  "8:00 PM – 11:00 PM",
-    venueText: "Kokni Community Hall, Morland Rd, Madanpura, Mumbai, Maharashtra 400008",
-    tagline:   "We can't wait to celebrate with you.",
-  },
+  eventsHeading: "THE CELEBRATIONS",
+  eventsTagline: "We can't wait to celebrate with you.",
+  events: [
+    {
+      label:     "NIKAH",
+      dateText:  "Friday, 6 November 2026",
+      timeText:  "8:00 PM – 11:00 PM",
+      venueText: "Kokni Community Hall, Morland Rd, Madanpura, Mumbai, Maharashtra 400008",
+    },
+    {
+      label:     "WALIMA",
+      dateText:  "Saturday, 7 November 2026",
+      timeText:  "8:00 PM – 11:00 PM",
+      venueText: "Kokni Community Hall, Morland Rd, Madanpura, Mumbai, Maharashtra 400008",
+    },
+  ],
 
   venue: {
     heading:    "THE VENUE",
