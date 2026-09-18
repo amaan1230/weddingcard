@@ -4,7 +4,15 @@ import { ChevronDown } from 'lucide-react';
 import { weddingData } from '../data/weddingData';
 import MusicControl from './MusicControl';
 
+function splitName(fullName) {
+  const [first, ...rest] = fullName.trim().split(' ');
+  return { first, last: rest.join(' ') };
+}
+
 export default function Hero({ musicTrigger }) {
+  const groom = splitName(weddingData.groom);
+  const bride = splitName(weddingData.bride);
+
   return (
     <section
       id="home"
@@ -16,7 +24,7 @@ export default function Hero({ musicTrigger }) {
         style={{ backgroundImage: `url(${weddingData.images.archCouple})` }}
       />
       {/* Top fade keeps text readable */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/85 via-[#FDFBF7]/20 to-[#FDFBF7]/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/85 via-[#FDFBF7]/55 to-[#FDFBF7]/85" />
 
       {/* ── Center Text ── */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center mt-4">
@@ -37,14 +45,28 @@ export default function Hero({ musicTrigger }) {
           transition={{ duration: 0.9, delay: 0.15 }}
           className="space-y-0.5"
         >
-          <h1 className="font-serif text-[clamp(3.2rem,15vw,6rem)] tracking-wider text-[#1E1410] font-normal uppercase leading-[1.05]">
-            {weddingData.groom}
+          <h1 className="leading-[1.05]">
+            <span className="block font-serif text-[clamp(3.2rem,15vw,6rem)] tracking-wider text-[#8B6914] font-normal uppercase">
+              {groom.first}
+            </span>
+            {groom.last && (
+              <span className="block font-serif text-[clamp(1rem,3.6vw,1.4rem)] tracking-[0.35em] text-[#1E1410]/65 font-normal uppercase mt-1">
+                {groom.last}
+              </span>
+            )}
           </h1>
           <p className="font-script text-[clamp(2.8rem,12vw,5rem)] text-[#8B6914] leading-none">
             &amp;
           </p>
-          <h1 className="font-serif text-[clamp(3.2rem,15vw,6rem)] tracking-wider text-[#1E1410] font-normal uppercase leading-[1.05]">
-            {weddingData.bride}
+          <h1 className="leading-[1.05]">
+            <span className="block font-serif text-[clamp(3.2rem,15vw,6rem)] tracking-wider text-[#8B6914] font-normal uppercase">
+              {bride.first}
+            </span>
+            {bride.last && (
+              <span className="block font-serif text-[clamp(1rem,3.6vw,1.4rem)] tracking-[0.35em] text-[#1E1410]/65 font-normal uppercase mt-1">
+                {bride.last}
+              </span>
+            )}
           </h1>
         </motion.div>
 
