@@ -65,21 +65,33 @@ export const weddingData = {
   },
 
   eventsHeading: "THE CELEBRATIONS",
-  eventsTagline: "We can't wait to celebrate with you.",
-  events: [
-    {
-      label:     "NIKAH",
-      dateText:  "Friday, 6 November 2026",
-      timeText:  "8:00 PM – 11:00 PM",
-      venueText: "Kokni Community Hall, Morland Rd, Madanpura, Mumbai, Maharashtra 400008",
-    },
-    {
-      label:     "WALIMA",
-      dateText:  "Saturday, 7 November 2026",
-      timeText:  "8:00 PM – 11:00 PM",
-      venueText: "Kokni Community Hall, Morland Rd, Madanpura, Mumbai, Maharashtra 400008",
-    },
-  ],
+  venueCard: {
+    name:    "Kokni Community Hall",
+    address: "Morland Rd, Madanpura, Mumbai, Maharashtra 400008",
+  },
+  nikah: {
+    eyebrow:     "Insha'Allah",
+    hijriDate:   "On 26 Jumada al-Awwal 1448 AH",
+    familyName:  "Ansari Family",
+    bodyText:    "Requests the honour of your presence at the Nikah ceremony of their beloved son",
+    groomParent: "Son of Mohammed Shahid Ansari",
+    brideParent: "Daughter of Mohd. Javed Ansari",
+    inviteLine:  "Join Their Nikah On",
+    day:         "FRIDAY",
+    dateNumber:  "06",
+    month:       "NOVEMBER",
+    year:        "2026",
+    time:        "Baad Namaz-e-Asr",
+  },
+  walima: {
+    bodyText:   "We are happy to invite you to share the joy and happiness of our",
+    title:      "Dawat-e-Walima",
+    day:        "SATURDAY",
+    dateNumber: "07",
+    month:      "NOVEMBER",
+    year:       "2026",
+    time:       "08:00 PM",
+  },
 
   venue: {
     heading:    "THE VENUE",
