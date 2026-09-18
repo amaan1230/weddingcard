@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* ── Custom font-family utilities ───────────────────────────────────────── */
+.font-serif   { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; }
+.font-display { font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif; }
+.font-script  { font-family: 'Great Vibes', 'Alex Brush', cursive; }
+.font-sans    { font-family: 'Montserrat', 'Inter', system-ui, sans-serif; }
+
+/* ── Global base ─────────────────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #FDFBF7;
+  color: #1E1410;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: #FDFBF7; }
+::-webkit-scrollbar-thumb  { background: #C5A059; border-radius: 9999px; }
+
+/* ── Petal float animation ───────────────────────────────────────────────── */
+@keyframes floatPetal {
+  0%   { transform: translateY(-8vh) rotate(0deg);   opacity: 0; }
+  8%   { opacity: 0.55; }
+  92%  { opacity: 0.55; }
+  100% { transform: translateY(108vh) rotate(340deg); opacity: 0; }
+}
+.animate-petal { animation: floatPetal 18s linear infinite; }
