@@ -16,7 +16,7 @@ function CoupleIcon() {
 function DateRow({ day, dateNumber, month, time, year }) {
   return (
     <>
-      <div className="flex items-end justify-center gap-5 sm:gap-7">
+      <div className="flex items-end justify-center gap-6 sm:gap-8">
         <span className="font-sans text-[9px] tracking-[0.2em] uppercase font-semibold text-[#1E1410] border-t border-[#8B6914]/40 pt-2 whitespace-nowrap">
           {day}
         </span>
@@ -28,11 +28,11 @@ function DateRow({ day, dateNumber, month, time, year }) {
             {month}
           </span>
         </div>
-        <span className="font-sans text-[9px] tracking-[0.2em] uppercase font-semibold text-[#1E1410] border-t border-[#8B6914]/40 pt-2 whitespace-nowrap">
-          {time}
-        </span>
       </div>
-      <p className="font-sans text-[10px] tracking-[0.3em] text-[#5C4E46] mt-3 mb-7">
+      <p className="font-sans text-[9px] tracking-[0.2em] uppercase font-semibold text-[#1E1410] mt-4">
+        {time}
+      </p>
+      <p className="font-sans text-[10px] tracking-[0.3em] text-[#5C4E46] mt-2 mb-7">
         {year}
       </p>
     </>
